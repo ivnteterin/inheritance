@@ -65,8 +65,8 @@ function IntBuilder(value) {
 
 const newStr = new StringBuilder("Hello");
 
-
-console.log(newStr.plus(" all","!")
+console.log("//ES5");
+console.log("StringBuilder result: " + newStr.plus(" all","!")
                   .minus(4)
                   .multiply(3)
                   .divide(4)
@@ -74,9 +74,8 @@ console.log(newStr.plus(" all","!")
                   .sub(1,1)
                   .get());
 
-const newInt = new IntBuilder();
-
-console.log(newInt.plus(2, 3, 2)                   
+const newInt = new IntBuilder(10);
+console.log("IntBuilder result: " + newInt.plus(2, 3, 2)                   
                   .minus(1, 2)                     
                   .multiply(2)                   
                   .divide(4)                       

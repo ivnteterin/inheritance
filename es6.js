@@ -1,7 +1,7 @@
 class Builder {
-  // constructor(value) {
-  //   this.value=value;
-  // }
+  constructor(value) {
+    this.value=value;
+  }
 
   plus (...args) {
     this.value=args.reduce((sum,arg)=> sum+arg,this.value);
@@ -40,7 +40,6 @@ class IntBuilder extends Builder {
   }
 
   static random(from,to) {
-    console.log("Random "+this);
    return Math.floor(Math.random() * (to-from) + from);
   }
 }
@@ -76,20 +75,15 @@ class StringBuilder extends Builder {
   } 
 }
 
-IntBuilder.random(10,100);
 
 
 const newInt = new IntBuilder(10);
 const newStr = new StringBuilder("Hello");
 
-console.log(newInt.plus(2, 3, 2)                   
-                  .minus(1, 2)                     
-                  .multiply(2)                   
-                  .divide(4)                       
-                  .mod(3)                          
-                  .get());
 
-console.log(newStr.plus(" all","!")
+console.log("//ES6");
+console.log("Random: " +IntBuilder.random(10,100));
+console.log("StringBuilder result: " + newStr.plus(" all","!")
                   .minus(4)
                   .multiply(3)
                   .divide(4)
@@ -97,19 +91,11 @@ console.log(newStr.plus(" all","!")
                   .sub(1,1)
                   .get());
 
+console.log("IntBuilder result: " + newInt.plus(2, 3, 2)                   
+                  .minus(1, 2)                     
+                  .multiply(2)                   
+                  .divide(4)                       
+                  .mod(3)                          
+                  .get());
 
-const obj1 = {};
-const obj2 = Object();
-const obj3 = new function () {};
-const obj4 = new class {};
-const obj5 = new Object();
-const obj6 = Object.create({});
-const obj7 = "";
-
-console.log(typeof obj1);
-console.log(typeof obj2);
-console.log(typeof obj3);
-console.log(typeof obj4);
-console.log(typeof obj5);
-console.log(typeof obj6);
 
